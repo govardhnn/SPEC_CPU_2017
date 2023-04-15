@@ -28,4 +28,4 @@ Running the benchmarks \
 	`. shrc`  \
 	`cd config` \
 	`runcpu --config=<your config file>.cfg --iterations=3 --reportable <intrate or fprate or all>` \
-ulimit -s unlimited required for fprate \
+ulimit -s unlimited required for fprate 
