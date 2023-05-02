@@ -1,9 +1,9 @@
 # SPEC_CPU_2017
 
-Download the SPEC CPU iso file into a directory \
+Download the SPEC CPU 2017 iso file into a directory \
 ![image](https://user-images.githubusercontent.com/37037342/235575445-550e17c4-b808-4522-a699-b02ae64265fd.png)
 
-Installing SPEC CPU 2017  
+## Installing SPEC CPU 2017  
 Prerequisites: \
 For gcc and g++ \
 	`sudo apt-get install build-essential` \
@@ -28,15 +28,18 @@ Unmount iso image and remove temporary folder\
 	`cd -`  \
 	`sudo umount /tmp/iso` \
 	`rmdir /tmp/iso` \
-Configuring \
+## Configuring 
 	`cd ~/benchmarks` \
 	`cp config/Example-gcc-linux-x86.cfg config/<your config file>.cfg` \
 	`cp config/flags/gcc.xml config/flags/<your xml file>-gcc.xml` \
 Edit flag and config files – Create one for yourhost computer \
 
-Running the benchmarks \
+## Running the benchmarks 
 	`. shrc`  \
 	`cd config` \
-	`runcpu --update` This command will solve a lot of expectant bugs, from personal experience
+	`runcpu --update` This command will solve a lot of expected bugs, from personal experience
 	`runcpu --config=<your config file>.cfg --iterations=3 --reportable <intrate or fprate or all>` \
+my command: runcpu --config govardhan.cfg --iterations <2|3> --reportable <intrate | fprate | all>
 ulimit -s unlimited required for fprate 
+
+Results of the run will be avalibale in the ~/benchmarks/Results folder in the form of a PDF, HTML, TXT
